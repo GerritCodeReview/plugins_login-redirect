@@ -1,63 +1,14 @@
 Build
 =====
 
-This @PLUGIN@ plugin is built with Buck.
+This @PLUGIN@ plugin is built with Bazel.
 
-Two build modes are supported: Standalone and in Gerrit tree.
-The standalone build mode is recommended, as this mode doesn't require
-the Gerrit tree to exist locally.
+Clone (or link) this plugin to the `plugins` directory of Gerrit's source tree.
 
-#### Build standalone
-
-Clone bucklets library:
+Then issue
 
 ```
-  git clone https://gerrit.googlesource.com/bucklets
-
-```
-and link it to @PLUGIN@ plugin directory:
-
-```
-  cd @PLUGIN@ && ln -s ../bucklets .
-```
-
-Add link to the .buckversion file:
-
-```
-  cd @PLUGIN@ && ln -s bucklets/buckversion .buckversion
-```
-
-Add link to the .watchmanconfig file:
-
-```
-  cd @PLUGIN@ && ln -s bucklets/watchmanconfig .watchmanconfig
-```
-
-To build the plugin, issue the following command:
-
-```
-  buck build plugin
-```
-
-The output is created in
-
-```
-  buck-out/gen/@PLUGIN@.jar
-```
-
-This project can be imported into the Eclipse IDE:
-
-```
-  ./bucklets/tools/eclipse.py
-```
-
-#### Build in Gerrit tree
-
-Clone or link this plugin to the plugins directory of Gerrit's source
-tree, and issue the command:
-
-```
-  buck build plugins/@PLUGIN@
+  bazel build plugins/@PLUGIN@
 ```
 
 in the root of Gerrit's source tree to build
@@ -65,15 +16,22 @@ in the root of Gerrit's source tree to build
 The output is created in
 
 ```
-  buck-out/gen/plugins/@PLUGIN@/@PLUGIN@.jar
+  bazel-genfiles/plugins/@PLUGIN@/@PLUGIN@.jar
 ```
 
-This project can be imported into the Eclipse IDE:
+This project can be imported into the Eclipse IDE.
+Add the plugin name to the `CUSTOM_PLUGINS` set in
+Gerrit core in `tools/bzl/plugins.bzl`, and execute:
 
 ```
   ./tools/eclipse/project.py
 ```
 
-[Back to @PLUGIN@ documentation index][index]
+To execute the tests run:
 
-[index]: index.html
+```
+  bazel test plugins/@PLUGIN@:websession_flatfile_tests
+```
+
+How to build the Gerrit Plugin API is described in the [Gerrit
+documentation](../../../Documentation/dev-bazel.html#_extension_and_plugin_api_jar_files).

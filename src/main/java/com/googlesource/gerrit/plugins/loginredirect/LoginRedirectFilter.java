@@ -20,9 +20,6 @@ import com.google.gerrit.httpd.WebSession;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 
 import javax.servlet.FilterChain;
@@ -34,9 +31,6 @@ import javax.servlet.http.HttpServletResponse;
 
 @Singleton
 public class LoginRedirectFilter extends AllRequestFilter {
-  private static final Logger log =
-      LoggerFactory.getLogger(LoginRedirectFilter.class);
-
   @Inject
   private DynamicItem<WebSession> sessionProvider;
 
