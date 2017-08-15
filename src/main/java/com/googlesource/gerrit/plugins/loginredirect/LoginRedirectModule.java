@@ -18,7 +18,6 @@ import com.google.gerrit.httpd.AllRequestFilter;
 import com.google.gerrit.httpd.plugins.HttpPluginModule;
 import com.google.inject.Scopes;
 
-
 public class LoginRedirectModule extends HttpPluginModule {
   @Override
   protected void configureServlets() {

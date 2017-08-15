@@ -19,9 +19,7 @@ import com.google.gerrit.httpd.AllRequestFilter;
 import com.google.gerrit.httpd.WebSession;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
-
 import java.io.IOException;
-
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
@@ -31,21 +29,18 @@ import javax.servlet.http.HttpServletResponse;
 
 @Singleton
 public class LoginRedirectFilter extends AllRequestFilter {
-  @Inject
-  private DynamicItem<WebSession> sessionProvider;
+  @Inject private DynamicItem<WebSession> sessionProvider;
 
   @Override
-  public void doFilter(ServletRequest request, ServletResponse response,
-      FilterChain chain) throws IOException, ServletException {
-    HttpServletRequest httpReq = (HttpServletRequest)request;
+  public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+      throws IOException, ServletException {
+    HttpServletRequest httpReq = (HttpServletRequest) request;
 
     String path = httpReq.getRequestURI();
     if (!httpReq.getContextPath().isEmpty()) {
       path = path.substring(httpReq.getContextPath().length());
     }
-    if (path.startsWith("/login") ||
-        path.startsWith("/a/") ||
-        sessionProvider.get().isSignedIn()) {
+    if (path.startsWith("/login") || path.startsWith("/a/") || sessionProvider.get().isSignedIn()) {
       chain.doFilter(request, response);
     } else {
       ((HttpServletResponse) response).sendRedirect(getLoginRedirectUrl(httpReq));
