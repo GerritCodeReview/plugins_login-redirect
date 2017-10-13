@@ -40,7 +40,11 @@ public class LoginRedirectFilter extends AllRequestFilter {
     if (!httpReq.getContextPath().isEmpty()) {
       path = path.substring(httpReq.getContextPath().length());
     }
-    if (path.startsWith("/login") || path.startsWith("/a/") || sessionProvider.get().isSignedIn()) {
+    if (path.startsWith("/login") ||
+        path.startsWith("/a/") ||
+        path.startsWith("/Documentation/") ||
+        path.startsWith("/static/") ||
+        sessionProvider.get().isSignedIn()) {
       chain.doFilter(request, response);
     } else {
       ((HttpServletResponse) response).sendRedirect(getLoginRedirectUrl(httpReq));
