@@ -44,6 +44,7 @@ public class LoginRedirectFilter extends AllRequestFilter {
         path.startsWith("/a/") ||
         path.startsWith("/Documentation/") ||
         path.startsWith("/static/") ||
+        path.equals("/ssh_info") ||
         sessionProvider.get().isSignedIn()) {
       chain.doFilter(request, response);
     } else {
