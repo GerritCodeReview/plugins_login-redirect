@@ -45,6 +45,7 @@ public class LoginRedirectFilter extends AllRequestFilter {
         || path.equals("/favicon.ico")
         || path.equals("/login")
         || path.startsWith("/login/")
+        || path.equals("/metrics")
         || path.equals("/oauth")
         || path.equals("/ssh_info")
         || path.startsWith("/static/")
