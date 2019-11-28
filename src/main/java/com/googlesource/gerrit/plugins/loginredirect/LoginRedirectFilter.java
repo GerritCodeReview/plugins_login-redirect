@@ -46,6 +46,7 @@ public class LoginRedirectFilter extends AllRequestFilter {
         || path.equals("/login")
         || path.startsWith("/login/")
         || path.equals("/oauth")
+        || path.startsWith("/plugins/")
         || path.equals("/ssh_info")
         || path.startsWith("/static/")
         || path.startsWith("/tools/hooks/")
