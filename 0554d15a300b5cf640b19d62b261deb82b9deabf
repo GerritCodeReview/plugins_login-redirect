@@ -22,6 +22,30 @@
       "revId": "0554d15a300b5cf640b19d62b261deb82b9deabf",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "63b51dcc_6629883f",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/loginredirect/LoginRedirectFilter.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1071857
+      },
+      "writtenOn": "2020-04-21T08:27:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "94ff496c_61397b48",
+      "range": {
+        "startLine": 49,
+        "startChar": 50,
+        "endLine": 49,
+        "endChar": 71
+      },
+      "revId": "0554d15a300b5cf640b19d62b261deb82b9deabf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
