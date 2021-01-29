@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f556fe9_760679c5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2021-01-29T09:26:49Z",
+      "side": 1,
+      "message": "nit:\ndouble ws",
+      "range": {
+        "startLine": 9,
+        "startChar": 18,
+        "endLine": 9,
+        "endChar": 20
+      },
+      "revId": "3edfbee8a564e3101792d1fec72d6252293a1c2c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
