@@ -53,6 +53,7 @@ public class LoginRedirectFilter extends AllRequestFilter {
         || path.equals("/ssh_info")
         || path.startsWith("/static/")
         || path.startsWith("/tools/hooks/")
+        || path.endsWith("/info/lfs/objects/batch")
         || Pattern.compile(GitOverHttpServlet.URL_REGEX).matcher(path).matches()
         || sessionProvider.get().isSignedIn()) {
       chain.doFilter(request, response);
