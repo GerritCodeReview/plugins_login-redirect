@@ -22,6 +22,30 @@
       },
       "revId": "5bf96ff87a50bccf901b55b987a737ca2e2b1153",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1723f868_c01b7809",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/loginredirect/LoginRedirectFilter.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1072286
+      },
+      "writtenOn": "2023-06-12T05:25:03Z",
+      "side": 1,
+      "message": "Yep, it uses `git-lfs-authenticate`.",
+      "parentUuid": "23ce981e_7592726d",
+      "range": {
+        "startLine": 53,
+        "startChar": 25,
+        "endLine": 53,
+        "endChar": 50
+      },
+      "revId": "5bf96ff87a50bccf901b55b987a737ca2e2b1153",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
