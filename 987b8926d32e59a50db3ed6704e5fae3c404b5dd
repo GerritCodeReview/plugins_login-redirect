@@ -33,6 +33,24 @@
       "message": "Move to line 44 to keep things in alphabetical order",
       "revId": "987b8926d32e59a50db3ed6704e5fae3c404b5dd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc03a51e_39cfc343",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/loginredirect/LoginRedirectFilter.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1071857
+      },
+      "writtenOn": "2023-08-30T12:25:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ddb79f52_7855b288",
+      "revId": "987b8926d32e59a50db3ed6704e5fae3c404b5dd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
