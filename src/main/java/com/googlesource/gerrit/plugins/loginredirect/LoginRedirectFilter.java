@@ -41,6 +41,7 @@ public class LoginRedirectFilter extends AllRequestFilter {
       path = path.substring(httpReq.getContextPath().length());
     }
     if (path.startsWith("/a/")
+        || path.equals("/config/server/healthcheck~status")
         || path.startsWith("/Documentation/")
         || path.equals("/favicon.ico")
         || path.equals("/login")
