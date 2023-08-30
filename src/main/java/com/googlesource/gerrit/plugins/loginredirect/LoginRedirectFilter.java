@@ -50,6 +50,7 @@ public class LoginRedirectFilter extends AllRequestFilter {
         || path.equals("/ssh_info")
         || path.startsWith("/static/")
         || path.startsWith("/tools/hooks/")
+        || path.equals("/config/server/healthcheck~status")
         || sessionProvider.get().isSignedIn()) {
       chain.doFilter(request, response);
     } else {
