@@ -1,1 +1,1 @@
-Redirect anonymous users to login form.
+Redirect anonymous web UI users to the login page.

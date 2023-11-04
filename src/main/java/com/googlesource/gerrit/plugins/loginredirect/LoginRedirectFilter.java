@@ -16,10 +16,12 @@ package com.googlesource.gerrit.plugins.loginredirect;
 import com.google.gerrit.extensions.registration.DynamicItem;
 import com.google.gerrit.extensions.restapi.Url;
 import com.google.gerrit.httpd.AllRequestFilter;
+import com.google.gerrit.httpd.GitOverHttpServlet;
 import com.google.gerrit.httpd.WebSession;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import java.io.IOException;
+import java.util.regex.Pattern;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
@@ -51,6 +53,7 @@ public class LoginRedirectFilter extends AllRequestFilter {
         || path.equals("/ssh_info")
         || path.startsWith("/static/")
         || path.startsWith("/tools/hooks/")
+        || Pattern.compile(GitOverHttpServlet.URL_REGEX).matcher(path).matches()
         || sessionProvider.get().isSignedIn()) {
       chain.doFilter(request, response);
     } else {
