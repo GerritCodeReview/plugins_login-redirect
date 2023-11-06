@@ -55,6 +55,42 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c2e0263c_da74dd9e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2023-11-06T20:52:12Z",
+      "side": 1,
+      "message": "\u003e Does it really need a config? Am I misunderstanding the implications of this change?\n\nMaybe not and I don\u0027t think you are.\n\n\u003e Isn\u0027t the only effect that a git clone over HTTP isn\u0027t redirected to /login? \n\nYes\n\n\u003e Redirecting a git clone to /login doesn\u0027t make sense to me, how would that be helpful?\n\nI don\u0027t see how it would be, but I haven\u0027t been using this plugin for long and didn\u0027t want to assume too much. I was assuming not everyone would want it based on Rikard\u0027s email on the list a year ago: https://groups.google.com/d/msgid/repo-discuss/869c4d1e-95e0-48f6-969f-baf391cbd9b9n%40googlegroups.com?utm_medium\u003demail\u0026utm_source\u003dfooter\n\n\u003e IIUC this should have been the default behavior all along and this change is basically a bug-fix. What am I missing?\n\nThat actually makes sense to me. 😊\n\nI\u0027ve updated the message.",
+      "parentUuid": "1aaeb3c0_9ebed342",
+      "revId": "e88e40c29af371d85f633fe99a8bf60dbc2609ca",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "298c6678_88994ab2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2023-11-06T20:52:12Z",
+      "side": 1,
+      "message": "\u003e I remember seeing a conversation about this, but I can\u0027t find it, and I don\u0027t really remember why this is something you\u0027d want?\n\nThis was the thread on the list: https://groups.google.com/d/msgid/repo-discuss/869c4d1e-95e0-48f6-969f-baf391cbd9b9n%40googlegroups.com?utm_medium\u003demail\u0026utm_source\u003dfooter\n\n\u003e Could you expand on it?\n\u003e I\u0027m assuming partial anonymous access?\n\nYes, setting up one or more repos to allow anonymous access for git-over-HTTP while still redirecting all web browsing traffic to `/login`.\n\n\u003e \n\u003e If it\u0027s a documented configuration option (default disabled) I don\u0027t really see an issue though.\n\nTo @sven.selberg@axis.com\u0027s point, do you think it would actually break anything if it was always enabled? If you don\u0027t have any repos that allow anonymous access then it looks like git will prompt you for password auth when you attempt access over HTTP anyway.",
+      "parentUuid": "fb37a110_547c2d3a",
+      "revId": "e88e40c29af371d85f633fe99a8bf60dbc2609ca",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ee35aa84_62f27bda",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/loginredirect/LoginRedirectFilter.java",
         "patchSetId": 1
@@ -66,6 +102,30 @@
       "writtenOn": "2023-11-06T11:49:00Z",
       "side": 1,
       "message": "Why not include unauthenticated HTTP URLs also?\n\n```suggestion      \n    if (Pattern.compile(GitOverHttpServlet.URL_REGEX).matcher(path).matches()) {\n      chain.doFilter(request, response);\n    } else if (path.startsWith(\"/a/\")\n        || path.equals(\"/config/server/healthcheck~status\")\n        || path.startsWith(\"/Documentation/\")\n        || path.equals(\"/favicon.ico\")\n        || path.equals(\"/login\")\n        || path.startsWith(\"/login/\")\n        || path.equals(\"/oauth\")\n        || (path.startsWith(\"/plugins/\") \u0026\u0026 !path.startsWith(\"/plugins/gitiles/\"))\n        || path.equals(\"/ssh_info\")\n        || path.startsWith(\"/static/\")\n        || path.startsWith(\"/tools/hooks/\")\n        || sessionProvider.get().isSignedIn()) {\n      chain.doFilter(request, response);\n    } else {\n```",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 5
+      },
+      "revId": "e88e40c29af371d85f633fe99a8bf60dbc2609ca",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c56b0cae_c3ec4738",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/loginredirect/LoginRedirectFilter.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2023-11-06T20:52:12Z",
+      "side": 1,
+      "message": "\u003e Why not include unauthenticated HTTP URLs also?\n\nThat\u0027s already what this is doing. All the conditions inside the `if` are ORed. But I was thinking refactoring this a bit more (in a follow up) to use some well-named helper methods instead a giant ORed list.",
+      "parentUuid": "ee35aa84_62f27bda",
       "range": {
         "startLine": 45,
         "startChar": 0,
