@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1aaeb3c0_9ebed342",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2023-11-06T13:18:59Z",
+      "side": 1,
+      "message": "Does it really need a config? Am I misunderstanding the implications of this change?\nIsn\u0027t the only effect that a git clone over HTTP isn\u0027t redirected to /login? Redirecting a git clone to /login doesn\u0027t make sense to me, how would that be helpful?\nIIUC this should have been the default behavior all along and this change is basically a bug-fix. What am I missing?",
+      "parentUuid": "1b3c5edc_98427090",
+      "revId": "e88e40c29af371d85f633fe99a8bf60dbc2609ca",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ee35aa84_62f27bda",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/loginredirect/LoginRedirectFilter.java",
         "patchSetId": 1
