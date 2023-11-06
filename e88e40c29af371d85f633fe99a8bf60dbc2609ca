@@ -33,6 +33,29 @@
       "message": "I remember seeing a conversation about this, but I can\u0027t find it, and I don\u0027t really remember why this is something you\u0027d want? Could you expand on it?\nI\u0027m assuming partial anonymous access?\n\nIf it\u0027s a documented configuration option (default disabled) I don\u0027t really see an issue though.\n\n+CC Sven",
       "revId": "e88e40c29af371d85f633fe99a8bf60dbc2609ca",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ee35aa84_62f27bda",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/loginredirect/LoginRedirectFilter.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2023-11-06T11:49:00Z",
+      "side": 1,
+      "message": "Why not include unauthenticated HTTP URLs also?\n\n```suggestion      \n    if (Pattern.compile(GitOverHttpServlet.URL_REGEX).matcher(path).matches()) {\n      chain.doFilter(request, response);\n    } else if (path.startsWith(\"/a/\")\n        || path.equals(\"/config/server/healthcheck~status\")\n        || path.startsWith(\"/Documentation/\")\n        || path.equals(\"/favicon.ico\")\n        || path.equals(\"/login\")\n        || path.startsWith(\"/login/\")\n        || path.equals(\"/oauth\")\n        || (path.startsWith(\"/plugins/\") \u0026\u0026 !path.startsWith(\"/plugins/gitiles/\"))\n        || path.equals(\"/ssh_info\")\n        || path.startsWith(\"/static/\")\n        || path.startsWith(\"/tools/hooks/\")\n        || sessionProvider.get().isSignedIn()) {\n      chain.doFilter(request, response);\n    } else {\n```",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 5
+      },
+      "revId": "e88e40c29af371d85f633fe99a8bf60dbc2609ca",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
