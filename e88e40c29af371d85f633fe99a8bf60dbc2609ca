@@ -16,6 +16,23 @@
       "message": "This does work, but probably needs to have a config.",
       "revId": "e88e40c29af371d85f633fe99a8bf60dbc2609ca",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb37a110_547c2d3a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1071857
+      },
+      "writtenOn": "2023-11-06T09:24:24Z",
+      "side": 1,
+      "message": "I remember seeing a conversation about this, but I can\u0027t find it, and I don\u0027t really remember why this is something you\u0027d want? Could you expand on it?\nI\u0027m assuming partial anonymous access?\n\nIf it\u0027s a documented configuration option (default disabled) I don\u0027t really see an issue though.\n\n+CC Sven",
+      "revId": "e88e40c29af371d85f633fe99a8bf60dbc2609ca",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
