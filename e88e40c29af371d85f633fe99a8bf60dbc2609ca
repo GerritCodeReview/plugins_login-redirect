@@ -89,6 +89,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c64bac8c_2d9f0e5b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2023-11-07T06:44:39Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "c2e0263c_da74dd9e",
+      "revId": "e88e40c29af371d85f633fe99a8bf60dbc2609ca",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ee35aa84_62f27bda",
@@ -126,6 +144,30 @@
       "side": 1,
       "message": "\u003e Why not include unauthenticated HTTP URLs also?\n\nThat\u0027s already what this is doing. All the conditions inside the `if` are ORed. But I was thinking refactoring this a bit more (in a follow up) to use some well-named helper methods instead a giant ORed list.",
       "parentUuid": "ee35aa84_62f27bda",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 5
+      },
+      "revId": "e88e40c29af371d85f633fe99a8bf60dbc2609ca",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1e8a9a8f_86926941",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/loginredirect/LoginRedirectFilter.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2023-11-07T06:44:39Z",
+      "side": 1,
+      "message": "Oh, I see now that I read too fast interpreted it as stacked ifs.\nSorry about the noice.",
+      "parentUuid": "c56b0cae_c3ec4738",
       "range": {
         "startLine": 45,
         "startChar": 0,
