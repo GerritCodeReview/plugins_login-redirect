@@ -109,6 +109,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "828a1786_17988a8a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2023-11-07T23:37:25Z",
+      "side": 1,
+      "message": "@rikardal@axis.com did you mean to resolve this? Do you have any other questions/concerns?",
+      "parentUuid": "298c6678_88994ab2",
+      "revId": "e88e40c29af371d85f633fe99a8bf60dbc2609ca",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ee35aa84_62f27bda",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/loginredirect/LoginRedirectFilter.java",
         "patchSetId": 1
