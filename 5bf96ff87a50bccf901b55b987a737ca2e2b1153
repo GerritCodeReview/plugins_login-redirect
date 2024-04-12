@@ -36,6 +36,23 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "86fa004c_1e4e733d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2024-04-12T11:37:57Z",
+      "side": 1,
+      "message": "@parth@esper.io, sorry I dropped the ball on this patch and now it doesn\u0027t rebase cleanly.\nCould you apply this patch so that it can be rebased (if I upload the patch I\u0027m not able to submit).",
+      "revId": "5bf96ff87a50bccf901b55b987a737ca2e2b1153",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "23ce981e_7592726d",
@@ -78,6 +95,29 @@
         "startChar": 25,
         "endLine": 53,
         "endChar": 50
+      },
+      "revId": "5bf96ff87a50bccf901b55b987a737ca2e2b1153",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "66da7551_d279fc6d",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/loginredirect/LoginRedirectFilter.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2024-04-12T11:37:57Z",
+      "side": 1,
+      "message": "```suggestion\n    if (path.startsWith(\"/a/\")\n        || path.equals(\"/config/server/healthcheck~status\")\n        || path.startsWith(\"/Documentation/\")\n        || path.equals(\"/favicon.ico\")\n        || path.endsWith(\"/info/lfs/objects/batch\")\n        || path.equals(\"/login\")\n        || path.startsWith(\"/login/\")\n        || path.equals(\"/oauth\")\n        || (path.startsWith(\"/plugins/\") \u0026\u0026 !path.startsWith(\"/plugins/gitiles/\"))\n        || path.equals(\"/ssh_info\")\n        || path.startsWith(\"/static/\")\n        || path.startsWith(\"/tools/hooks/\")\n        || Pattern.compile(GitOverHttpServlet.URL_REGEX).matcher(path).matches()\n        || sessionProvider.get().isSignedIn()) {\n      chain.doFilter(request, response);\n```",
+      "range": {
+        "startLine": 43,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 40
       },
       "revId": "5bf96ff87a50bccf901b55b987a737ca2e2b1153",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
